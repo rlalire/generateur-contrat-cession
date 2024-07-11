@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Contrat de Cession</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], input[type="email"], input[type="date"], input[type="time"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Générateur de Contrat de Cession</h1>
+    <form id="contractForm">
+       <h2>Producteur (Informations préremplies)</h2>
+<div class="form-group">
+    <label>Raison sociale : L'atelier de l'impossible</label>
+</div>
+<div class="form-group">
+    <label>Adresse : 7 rue des Cytises</label>
+</div>
+<div class="form-group">
+    <label>N° siret : 80204795100040</label>
+</div>
+<div class="form-group">
+    <label>N° Licence et catégorie : 2 - 1084937</label>
+</div>
+<div class="form-group">
+    <label>N° TVA Intracommunautaire : FR83802047951</label>
+</div>
+<div class="form-group">
+    <label>Représenté par : Emmanuel Philippe</label>
+</div>
+<div class="form-group">
+    <label>en sa qualité de : Président</label>
+</div>
+<div class="form-group">
+    <label>Tél : 0662808919</label>
+</div>
+<div class="form-group">
+    <label>Email : bureau@latelierdelimpossible.com</label>
+</div>
+
+<h2>Organisateur</h2>
+<div class="form-group">
+    <label for="raison_sociale_organisateur">Raison sociale :</label>
+    <input type="text" id="raison_sociale_organisateur" name="raison_sociale_organisateur" required>
+</div>
+<div class="form-group">
+    <label for="adresse_organisateur">Adresse :</label>
+    <input type="text" id="adresse_organisateur" name="adresse_organisateur" required>
+</div>
+<div class="form-group">
+    <label for="siret_organisateur">N° SIRET :</label>
+    <input type="text" id="siret_organisateur" name="siret_organisateur" required>
+</div>
+<div class="form-group">
+    <label for="num_licence_organisateur">N° Licence et catégorie :</label>
+    <input type="text" id="num_licence_organisateur" name="num_licence_organisateur" required>
+</div>
+<div class="form-group">
+    <label for="numero_tva_organisateur">N° TVA Intracommunautaire :</label>
+    <input type="text" id="numero_tva_organisateur" name="numero_tva_organisateur" required>
+</div>
+<div class="form-group">
+    <label for="representant_organisateur">Représenté par :</label>
+    <input type="text" id="representant_organisateur" name="representant_organisateur" required>
+</div>
+<div class="form-group">
+    <label for="qualite_representant_organisateur">en sa qualité de :</label>
+    <input type="text" id="qualite_representant_organisateur" name="qualite_representant_organisateur" required>
+</div>
+
+        <h2>Spectacle</h2>
+        <div class="form-group">
+            <label for="titre_spectacle">Titre du spectacle :</label>
+            <input type="text" id="titre_spectacle" name="titre_spectacle" required>
+        </div>
+        <div class="form-group">
+            <label for="noms_artistes">Noms des artistes :</label>
+            <input type="text" id="noms_artistes" name="noms_artistes" required>
+        </div>
+        <div class="form-group">
+            <label for="lieu_de_la_representation">Lieu de la représentation :</label>
+            <input type="text" id="lieu_de_la_representation" name="lieu_de_la_representation" required>
+        </div>
+        <div class="form-group">
+            <label for="adresse_complete">Adresse complète :</label>
+            <input type="text" id="adresse_complete" name="adresse_complete" required>
+        </div>
+        <div class="form-group">
+            <label for="date_de_la_representation">Date de la représentation :</label>
+            <input type="date" id="date_de_la_representation" name="date_de_la_representation" required>
+        </div>
+        <div class="form-group">
+            <label for="horaire_de_la_representation">Horaire de la représentation :</label>
+            <input type="time" id="horaire_de_la_representation" name="horaire_de_la_representation" required>
+        </div>
+
+       <h2>Conditions Financières</h2>
+        <div class="form-group">
+            <label for="recap_prestations">Récapitulatif des prestations :</label>
+            <textarea id="recap_prestations" name="recap_prestations" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="ordre_de_paiement_entreprise">Ordre de paiement :</label>
+            <input type="text" id="ordre_de_paiement_entreprise" name="ordre_de_paiement_entreprise" required>
+        </div>
+        <div class="form-group">
+            <label for="recap_echeances">Récapitulatif des échéances :</label>
+            <textarea id="recap_echeances" name="recap_echeances" rows="4" required></textarea>
+        </div>
+       
+        <h2>Autres Informations</h2>
+        <div class="form-group">
+            <label for="demande_promo">Demande de promotion :</label>
+            <input type="text" id="demande_promo" name="demande_promo" required>
+        </div>
+        <div class="form-group">
+            <label for="recap_restauration">Récapitulatif restauration :</label>
+            <textarea id="recap_restauration" name="recap_restauration" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="recap_hebergement">Récapitulatif hébergement :</label>
+            <textarea id="recap_hebergement" name="recap_hebergement" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exoneration">Nombre d'invitations :</label>
+            <input type="number" id="exoneration" name="exoneration" required>
+        </div>
+        <div class="form-group">
+            <label for="tribunaux">Tribunaux compétents :</label>
+            <input type="text" id="tribunaux" name="tribunaux" required>
+        </div>
+        <div class="form-group">
+            <label for="ville_entreprise">Ville de l'entreprise :</label>
+            <input type="text" id="ville_entreprise" name="ville_entreprise" required>
+        </div>
+        <div class="form-group">
+            <label for="date_contrat">Date du contrat :</label>
+            <input type="date" id="date_contrat" name="date_contrat" required>
+        </div>
+
+        <button type="button" onclick="generateContract()">Générer le Contrat</button>
+    </form>
+
+   <script>
+function generateContract() {
+    const formData = new FormData(document.getElementById('contractForm'));
+    const contractData = Object.fromEntries(formData.entries());
+
+    const contractHTML = `
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contrat de Cession</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+            }
+            h1 {
+                text-align: center;
+            }
+            .section-title {
+                font-weight: bold;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            .indent {
+                margin-left: 20px;
+            }
+            @media print {
+                body {
+                    print-color-adjust: exact;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <h1>CONTRAT DE CESSION DU DROIT D'EXPLOITATION D'UN SPECTACLE</h1>
+    <p><strong>ENTRE LES SOUSSIGNES</strong></p>
+    <p>
+    Raison sociale : ${contractData.raison_sociale_organisateur}<br>
+    Adresse : ${contractData.adresse_organisateur}<br>
+    N° siret : ${contractData.siret_organisateur}<br>
+    N° Licence et catégorie: ${contractData.num_licence_organisateur}<br>
+    N° TVA Intracommunautaire : ${contractData.numero_tva_organisateur}<br>
+    Représenté par ${contractData.representant_organisateur}<br>
+    en sa qualité de ${contractData.qualite_representant_organisateur}<br>
+    Ci-après dénommé l'Organisateur, d'une part
+    </p>
+    <p><strong>ET</strong></p>
+    <p>
+    Raison sociale : L'atelier de l'impossible<br>
+    Adresse : 7 rue des Cytises<br>
+    N° siret : 80204795100040<br>
+    N° Licence et catégorie : 2 - 1084937<br>
+    N° TVA Intracommunautaire : FR83802047951<br>
+    Représenté par Emmanuel Philippe<br>
+    en sa qualité de Président<br>
+    Tél : 0662808919<br>
+    email : bureau@latelierdelimpossible.com<br>
+    Ci-après dénommé le Producteur, d'autre part
+    </p>
+        <p>Le Producteur disposant du droit de représentation en France du Spectacle :</p>
+        <p class="indent">
+        ${contractData.titre_spectacle}<br>
+        par ${contractData.noms_artistes}
+        </p>
+        <p class="section-title">OBJET :</p>
+        <p>Le Producteur s'engage à donner le droit d'exploiter le spectacle ci-dessus référencé dans les conditions définies ci-après et expressément acceptées par l'Organisateur.</p>
+        <p class="section-title">REPRÉSENTATION :</p>
+        <p>
+        Lieu : ${contractData.lieu_de_la_representation},<br>
+        ${contractData.adresse_complete}<br>
+        Date : ${contractData.date_de_la_representation} , à ${contractData.horaire_de_la_representation}
+        </p>
+        <p class="section-title">CONDITIONS FINANCIÈRES :</p>
+        <p>${contractData.recap_prestations}</p>
+        <p>Règlement établis à l'ordre de ${contractData.ordre_de_paiement_entreprise} aux montants et dates suivantes: ${contractData.recap_echeances}</p>
+        <p>Dans le cas de règlement par virement bancaire, l'ordre de virement du solde sera impérativement effectué le jour même de la représentation, sur le compte suivant:</p>
+<p>IBAN : FR76 1250 6390 4656 5192 8527</p>
+<p>Code BIC (Bank Identification Code) - Code swift: AGRIFRPP825</p>
+        <p>L'intégralité des frais bancaires seront à la charge de l'organisateur; Il est convenu que l'Organisateur ne pourrait arguer auprès d'une insuffisance des recettes pour se soustraire au réglement du montant de la facture.</p>
+        <p class="section-title">A LA CHARGE DU PRODUCTEUR :</p>
+        <p>• Matériel de promotion : ${contractData.demande_promo}</p>
+        <p>La publicité ne sera délivrée qu'à la signature du contrat.</p>
+        <p class="section-title">A LA CHARGE DE L'ORGANISATEUR :</p>
+        <p>• Restauration :</p>
+        <p class="indent">repas chauds complets (entrée, plat principal, fromage, dessert, boissons) pour le(s) repas suivant(s) :</p>
+        <p class="indent">${contractData.recap_restauration}</p>
+        <p>• Hébergement dans un hôtel** pour la (les) nuit(s) suivante(s) :</p>
+        <p class="indent">${contractData.recap_hebergement}</p>
+        <p>• Transport aller et retour (cf 'conditions financières')</p>
+        <p>• Taxes (notamment les droits SACEM), assurances et impôts afférents à l'exploitation du spectacle, taxe parafiscale s'il y a lieu.</p>
+        <p>• Lieu de représentation en ordre de marche.</p>
+        <p>• Matériel de sonorisation : L'Organisateur se conformera à la fiche technique ci-jointe indissociable du présent contrat.</p>
+        <p class="section-title">CONDITIONS GÉNÉRALES :</p>
+        <p>Le Producteur fournira le spectacle entièrement monté et assumera la responsabilité artistique des représentations. En sa qualité d'employeur, il assurera les rémunérations, charges sociales et fiscales comprises, de son personnel attaché au spectacle. Il lui appartiendra notamment de solliciter, en temps utiles, auprès des autorités compétentes, les autorisations pour l'emploi, le cas échéant de mineurs ou d'artistes étrangers dans le spectacle.</p>
+        <p>L'Organisateur fournira le lieu de représentation en ordre de marche, y compris le personnel nécessaire aux chargement, déchargement, aux montage et démontage et au service des représentations. Il assurera en outre le service d'ordre général du lieu, location, accueil, billetterie, encaissement et comptabilité des recettes. En qualité d'employeur, il assurera les rémunérations, charges sociales et fiscales de ce personnel. Le lieu de spectacle sera mis à la disposition exclusive des artistes pendant 2 heures, le jour de la représentation, pour réaliser un filage, une balance son et un calage lumière. Entre la fin du filage et le début de la représentation, les artistes disposeront de 2 heures pour se restaurer et se préparer au spectacle. Des loges seront mises à disposition des artistes à proximité du lieu de représentation, comportant lavabo, miroirs, chaises, tables et portants en quantité suffisante. Elles seront gardées pendant la représentation et tout le temps pendant lequel les effets personnels des artistes y seront déposés. Un catering y sera disposé dès l'arrivée des artistes, comprenant nourritures et boissons en qualité et quantité suffisantes :communiqué ultérieurement Les éléments de merchandising (disques, photos, affiches, vêtements…) seront exclusivement fournis par le Producteur, qui en assurera la vente avant, pendant ou après la représentation. Le produit de cette vente restera intégralement acquis par le Producteur. Pour effectuer cette vente, l'Organisateur mettra à disposition du Producteur une table et un point d'éclairage, à l'endroit choisi par le Producteur.</p>
+        <p class="section-title">PROMOTION</p>
+        <p>En matière de publicité et d'information, l'Organisateur s'efforcera de respecter l'esprit général de la documentation fournie par le Producteur et observera scrupuleusement les mentions obligatoires. Tout enregistrement ou diffusion, sonore ou audiovisuel, même partiel, du spectacle, devra être communiquée à l'avance pour décision au producteur. L'Organisateur remettra au Producteur un press-book contenant la totalité de la campagne de presse réalisée, tous les articles de presses édités à la suite de la représentation, ainsi que le matériel de promotion donné à titre gratuit et non utilisé. En outre, le Producteur disposera de ${contractData.exoneration} invitations.</p>
+        <p class="section-title">ASSURANCES</p>
+        <p>L'Organisateur déclare avoir souscrit les assurances nécessaires à la couverture des risques liés aux représentations du spectacle dans son lieu. L'Organisateur assurera le gardiennage des instruments, véhicules et matériels des artistes de leur arrivée à leur départ. Un garage ou parking gardé sera mis à disposition pour les véhicules des artistes, en particulier durant la nuit. Tout le matériel est sous l'entière responsabilité de l'Organisateur en cas de détérioration, vol, incendie. En cas de conditions météorologiques qui rendraient impossible ou dangereuse la tenue du spectacle, ou dommageable pour tout ou partie du matériel artistique, l'Organisateur s'engage à verser au Producteur l'intégralité de la somme prévue au contrat.</p>
+        <p class="section-title">RESILIATION OU SUSPENSION DU CONTRAT</p>
+        <p>Le présent engagement ne pourra être dénoncé de part et d'autre sans indemnité d'aucune sorte que dans les cas suivants : guerre, inondations, deuil national, maladie dûment constatée d'un artiste interprète irremplaçable, décès dûment constaté d'un parent proche d'un interprète irremplaçable, et d'une façon générale dans tous les cas de force majeure tels qu'ils sont définis par les coutumes et les lois découlants de 'circonstances imprévisibles et insurmontables'. Dans le cas de retard à l'arrivée des musiciens, retard dû à des circonstances indépendantes de la volonté du Producteur (intempéries, grèves, trafic, retard de compagnies aériennes), l'Organisateur devra utiliser toutes les ressources pour maintenir le concert à l'arrivée des musiciens.</p>
+        <p>Le concert ne pourra être annulé sans l'accord écrit du Producteur. Enfin, si aucune solution amiable de report ou de remplacement n'est trouvée : Toute annulation du fait de l'Organisateur entrainerait pour ce dernier l'obligation de verser au Producteur une indemnité égale au montant de la facture mentionnée, à titre de clauses pénales forfaitaires et irréductibles, sans préjudice d'éventuel autres recours pour faire valoir des droits et/ou des dommages subis par l'autre partie. Toute annulation du fait du Producteur entraînerait pour ce dernier l'obligation de verser à l'Organisateur une indemnité calculée en fonction des frais effectivement engagés dont le montant ne saurait être supérieur au montant de la facture mentionnée.</p>
+        <p class="section-title">VALIDITE DU CONTRAT</p>
+        <p>S'il n'a pas été signé simultanément par les deux parties le même jour, le présent contrat, signé par l'un des contractants devra être retourné par le second contractant dans les dix jours suivant la date de la première signature, le cachet de la poste faisant foi. Au delà du délai indiqué, le premier signataire est en droit de se considérer comme dégagé de toute obligation. A dater de la signature du deuxième contractant, les clauses de suspension et de résiliation s'appliquent.</p>
+        <p class="section-title">ATTRIBUTION DE JURIDICTION</p>
+        <p>En cas de litige sur l'exécution ou l'interprétation du présent contrat, compétence d'attribution est donnée aux Tribunaux de ${contractData.tribunaux} où le signataire sera civilement responsable.</p>
+        <p class="section-title">CONTRAT TECHNIQUE</p>
+        <p>Le contrat technique fait partie intégrante du présent contrat. Il devra être impérativement retourné et signé.</p>
+        <p>Toute modification des conditions d'accueil devra être impérativement signalée au producteur avant la signature des contrats. Le non respect du contrat technique entraînerait l'annulation du contrat à la charge de l'Organisateur.</p>
+ 
+        <p>Fait en deux exemplaires à ${contractData.ville_entreprise}, le ${contractData.date_contrat}</p>
+        <p>Lu et approuvé, bon pour accord</p>
+    </body>
+    </html>
+    `;
+
+    // Ouverture d'une nouvelle fenêtre pour l'impression
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(contractHTML);
+    printWindow.document.close();
+    printWindow.onload = function() {
+        printWindow.print();
+    };
+}
+</script>
+</body>
+</html>
