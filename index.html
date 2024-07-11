@@ -180,9 +180,6 @@
 
    <script>
 function generateContract() {
-    const formData = new FormData(document.getElementById('contractForm'));
-    const contractData = Object.fromEntries(formData.entries());
-
     const contractHTML = `
     <!DOCTYPE html>
     <html lang="fr">
@@ -196,6 +193,14 @@ function generateContract() {
                 line-height: 1.6;
                 margin: 0;
                 padding: 20px;
+            }
+            .logo-container {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .logo {
+                max-width: 200px; /* Ajustez cette valeur selon la taille souhaitée */
+                height: auto;
             }
             h1 {
                 text-align: center;
@@ -215,7 +220,10 @@ function generateContract() {
             }
         </style>
     </head>
-<body>
+    <body>
+        <div class="logo-container">
+            <img src="URL_DE_VOTRE_LOGO" alt="Logo de l'entreprise" class="logo">
+        </div>
     <h1>CONTRAT DE CESSION DU DROIT D'EXPLOITATION D'UN SPECTACLE</h1>
     <p><strong>ENTRE LES SOUSSIGNES</strong></p>
     <p>
