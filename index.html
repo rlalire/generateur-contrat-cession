@@ -180,6 +180,9 @@
 
    <script>
 function generateContract() {
+    const formData = new FormData(document.getElementById('contractForm'));
+    const contractData = Object.fromEntries(formData.entries());
+
     const contractHTML = `
     <!DOCTYPE html>
     <html lang="fr">
@@ -193,14 +196,6 @@ function generateContract() {
                 line-height: 1.6;
                 margin: 0;
                 padding: 20px;
-            }
-            .logo-container {
-                text-align: center;
-                margin-bottom: 20px;
-            }
-            .logo {
-                max-width: 200px; /* Ajustez cette valeur selon la taille souhaitée */
-                height: auto;
             }
             h1 {
                 text-align: center;
@@ -220,10 +215,7 @@ function generateContract() {
             }
         </style>
     </head>
-    <body>
-        <div class="logo-container">
-            <img src="https://github.com/rlalire/generateur-contrat-cession/blob/main/logo%20atelier.png" alt="Logo de l'entreprise" class="logo">
-        </div>
+<body>
     <h1>CONTRAT DE CESSION DU DROIT D'EXPLOITATION D'UN SPECTACLE</h1>
     <p><strong>ENTRE LES SOUSSIGNES</strong></p>
     <p>
